@@ -81,4 +81,5 @@ Push the final code to a **public GitHub repository** and submit its link accord
 ---
 
 *Learning project based on the 4Geeks Academy “Cinema Seat Manager” assignment.*
+
 afva
