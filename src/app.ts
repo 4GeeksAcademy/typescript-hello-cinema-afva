@@ -111,10 +111,8 @@ ${suggestion}`;
 
 
 
-export function countSeats(cinema: number[][]): {
-    occupied: number;
-    available: number;
-} {
+export function countSeats(cinema: number[][]): [number, number] {
+
     let occupied = 0;
     let available = 0;
 
@@ -129,7 +127,7 @@ export function countSeats(cinema: number[][]): {
         }
     }
 
-    return { occupied, available };
+    return [occupied, available];
 }
 
 

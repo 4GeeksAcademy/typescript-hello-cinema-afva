@@ -35,13 +35,13 @@ function printCinemaResults(cinema: number[][]): void {
 
     displayCinema(cinema);
 
-    const result = countSeats(cinema);
+    const [occupied, available] = countSeats(cinema);
 
     console.log("\n  SEAT AVAILABILITY");
     console.log("  " + "-".repeat(30));
-    console.log(`  Occupied seats  : ${result.occupied}`);
-    console.log(`  Available seats : ${result.available}`);
-    console.log(`  Total capacity  : ${result.occupied + result.available}`);
+    console.log(`  Occupied seats  : ${occupied}`);
+    console.log(`  Available seats : ${available}`);
+    console.log(`  Total capacity  : ${occupied + available}`);
 
     console.log("\n  ADJACENT SEAT SEARCH");
     console.log("  " + "-".repeat(30));
