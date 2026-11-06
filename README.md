@@ -1,112 +1,83 @@
-# Hello World with Typescript
+# 🎬 Cinema Seat Manager
 
-<!-- hide -->
-> By [@ehiber](https://github.com/ehiber) and contributors at [4Geeks Academy](https://4geeksacademy.com/)
+**Project status:** In development. This document describes the assignment requirements, not features already implemented.
 
-[![build by developers](https://img.shields.io/badge/build_by-Developers-blue)](https://4geeks.com)
-[![twitter](https://img.shields.io/twitter/follow/4geeksacademy?style=social&logo=twitter)](https://twitter.com/4geeksacademy)
+## Description
 
-*Estas instrucciones estan disponibles en [espanol](./README.es.md).*
-<!-- endhide -->
-Start coding a TypeScript/HTML/CSS website in 30 seconds by opening this template using 4Geeks' [One-Click Coding](https://s.4geeks.com/start?repo=https://github.com/4GeeksAcademy/typescript-hello) or locally on your computer.
+**Cinema Seat Manager** is an educational project to develop a TypeScript command-line prototype for managing reservations in a cinema with **8 rows and 10 seats per row** (80 seats in total). Staff will be able to check availability, reserve seats, and find two adjacent free seats.
 
-## Before you begin
+The goal is to practice **two-dimensional arrays, functions, conditionals, and loops in TypeScript**.
 
-Install the packages by typing:
+## Functional requirements
+
+- Initialize an 8 × 10 `number[][]` matrix, where `0` means available and `1` means occupied.
+- Display the room in the console with row and column numbers, using `L` for available and `X` for occupied.
+- Reserve a seat by specifying its row and column.
+- Validate that the coordinates are within the room and the seat is not already occupied; report whether the reservation succeeds or fails.
+- Count and return the numbers of available and occupied seats.
+- Find the **first pair of horizontally adjacent available seats in the same row**, or clearly report that none exists.
+- Display understandable messages for each operation.
+
+## Test scenarios
+
+1. **Empty room:** all seats available.
+2. **Partially occupied room:** a mixture of available and occupied seats.
+3. **Nearly full room:** only isolated available seats remain, with no adjacent pairs.
+4. **Full room:** no available seats remain.
+
+Out-of-range coordinates and attempts to reserve an occupied seat will also be checked.
+
+## Technologies and constraints
+
+- **TypeScript** for the console application.
+- A **two-dimensional array** as the sole representation of seat states.
+- **Functions, conditionals, and loops** for the logic.
+- **Do not use objects or classes** in the assignment implementation. The brief permits JSON if additional metadata is needed.
+- A web interface using HTML and Tailwind is an **optional challenge**, not an assessment requirement.
+
+## Getting started
+
+The assignment recommends using the [4Geeks Academy TypeScript template](https://github.com/4GeeksAcademy/typescript-hello), either in Codespaces or locally.
 
 ```bash
+git clone https://github.com/4GeeksAcademy/typescript-hello.git cinema-seat-manager
+cd cinema-seat-manager
 npm install
 ```
 
-## How do I run my website to see live changes?
-
-Type on the command line:
+Create your own GitHub repository and update the remote:
 
 ```bash
-npm run start
+git remote set-url origin https://github.com/YOUR_USERNAME/YOUR_REPOSITORY.git
 ```
 
-Then open your local URL in the browser (usually `http://localhost:5173`).
+To run the project, check the scripts available in the template's `package.json`. The exact command may depend on the template version.
 
-## How do I run this in GitHub Codespaces?
+## Evaluation criteria
 
-Run the same development server:
+- Correct use of a two-dimensional array.
+- Functions with appropriate parameters and return values.
+- Validation using `if` and `else`.
+- Traversal using loops.
+- Correct identification of two horizontally adjacent available seats.
+- Readable code, clear names, and comments explaining each function.
+- Error-free execution and useful console messages.
 
-```bash
-npm run start
-```
+## Progress checklist
 
-Vite is configured to listen on `0.0.0.0`, so Codespaces can detect and forward port `5173` automatically.
+- [ ] Initialize the seating matrix.
+- [ ] Display the seating map.
+- [ ] Implement reservations and validation.
+- [ ] Count available and occupied seats.
+- [ ] Find two adjacent seats.
+- [ ] Test all four scenarios.
+- [ ] Document functions and verify output.
+- [ ] Push the code to a public repository.
 
-## How do I run only the TypeScript check?
+## Submission
 
-Use this command to validate only TypeScript without starting Vite:
+Push the final code to a **public GitHub repository** and submit its link according to your instructor's instructions.
 
-```bash
-npm run typecheck
-```
+---
 
-## How do I run `main.ts` from the terminal?
-
-If you want to execute `./src/main.ts` directly and see `console.log` output in the terminal, run:
-
-```bash
-npm run console
-```
-
-This command is already wired to `./src/main.ts`.
-
-## Where do I write my code?
-
-It depends on the language:
-
-- `./src/main.ts` for TypeScript logic.
-- `./src/style.css` for styles (Tailwind CSS v4 is already imported).
-- `./index.html` for the HTML shell.
-
-You can add more files as needed, just make sure to import them from `main.ts`.
-
-Note: if you can see the "Hello Rigo" card and the message "If you can see this, Tailwind is working.", Tailwind is configured correctly.
-
-## Troubleshooting
-
-### I don't see my changes...
-
-Every time you change any file inside `./src`, the website refreshes automatically (hot reload).
-
-If changes still don't appear, refresh clearing cache:
-
-- Mac: `Cmd + Shift + R`
-- Windows/Linux: `Ctrl + Shift + R`
-
-## How do I include more images in my project?
-
-Add them inside `./public` and reference them in HTML using `/your-image-name.ext`.
-
-Example:
-
-```html
-<img src="/rigo-baby.jpg" alt="Rigo" />
-```
-
-## How do I include more TypeScript files?
-
-Add files into `./src` and import them from `main.ts`.
-
-Example:
-
-```ts
-import { myVar } from "./file2";
-```
-
-## How do I publish the website?
-
-This boilerplate is compatible with Vercel in one step.
-
-<!-- hide -->
-## Contributors
-
-This template was built as part of the [4Geeks Academy Coding Bootcamp](https://4geeksacademy.com/us/coding-bootcamp) by [ehiber](https://github.com/ehiber) and contributors. Find out more about our [AI Engineering Course](https://4geeksacademy.com/us/coding-bootcamps/ai-engineering), [Full Stack Developer Course](https://4geeksacademy.com/us/coding-bootcamps/part-time-full-stack-developer), and [Data Science Bootcamp](https://4geeksacademy.com/us/coding-bootcamps/datascience-machine-learning).
-
-You can find other templates and resources like this at the [school's GitHub page](https://github.com/4geeksacademy/).
-<!-- endhide -->
+*Learning project based on the 4Geeks Academy “Cinema Seat Manager” assignment.*
